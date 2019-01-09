@@ -8,7 +8,7 @@ const expressSession = require('express-session');
 const connectMongo = require('connect-mongo');
 const flash = require("connect-flash");
 const redirectIfAuthenticated = require('./middleware/redirectIfAuthenticated');
-
+var MongoClient = require('mongodb').MongoClient;
 
 const createPost = require('./controllers/createPost');
 const Home = require('./controllers/home');
@@ -25,8 +25,7 @@ const logout = require('./controllers/logOut');
 const storePost = require('./middleware/storePost');
 
 
-
-new mongoose.connect('mongodb://Ajidagba:Marinestar@blog0-shard-00-00-rna9n.mongodb.net:27017,blog0-shard-00-01-rna9n.mongodb.net:27017,blog0-shard-00-02-rna9n.mongodb.net:27017/node-blog?ssl=true&replicaSet=Blog0-shard-0&authSource=admin&retryWrites=true', {
+new mongoose.connect('mongodb://Mateen:Marinestar12@ds251894.mlab.com:51894/node-blog', {
         useNewUrlParser: true
     })
     .then(() => 'You are now connected to Mongo!')
