@@ -40,13 +40,14 @@
           <li class="nav-item">
             <a class="nav-link" href="/post/new">New Posts</a>
           </li>
-         @if(auth)
+         @if(!auth)
   <li class="nav-item">
     <a class="nav-link" href="/auth/login">Login</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/auth/register">Register</a>
   </li>
+  @endif
   @!section('post-edit')
   @else
   <li class="nav-item">
