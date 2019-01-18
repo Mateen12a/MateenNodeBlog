@@ -8,8 +8,6 @@ const expressSession = require('express-session');
 const connectMongo = require('connect-mongo');
 const flash = require("connect-flash");
 const redirectIfAuthenticated = require('./middleware/redirectIfAuthenticated');
-var MongoClient = require('mongodb').MongoClient;
-
 const createPost = require('./controllers/createPost');
 const Home = require('./controllers/home');
 
@@ -49,12 +47,6 @@ app.use('*', (req, res, next) => {
     edge.global('auth', req.session.userId);
     next();
 });
-mongoose.connect('mongodb://localhost:27017/node-blog', {
-        useNewUrlParser: true
-    })
-    .then(() => 'You are now connected to Mongo!')
-    .catch(err => console.error('Something went wrong', err));
-
 
 app.use(fileUpload());
 app.use(express.static('public'));
