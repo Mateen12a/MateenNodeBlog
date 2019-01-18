@@ -69,8 +69,8 @@ app.get('/auth/logout', logout);
 app.post("/posts/store", auth, storePostController,storePost);
 
 
-app.listen(4000, () => {
-    console.log('Server Started On Port 4000');
+app.listen(process.env.PORT || 5000,() => {
+console.log('Server Started On Port 5000')
 });
 
 
