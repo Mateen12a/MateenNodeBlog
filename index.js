@@ -27,7 +27,7 @@ new mongoose.connect('mongodb://Mateen:Marinestar12@ds251894.mlab.com:51894/node
         useNewUrlParser: true
     })
     .then(() => 'You are now connected to Mongo!')
-    .catch(err => console.error('Something went wrong', err));
+    .catch(err => console.error('Something went wrong', err));/**/
 
 app.use(flash());
 
