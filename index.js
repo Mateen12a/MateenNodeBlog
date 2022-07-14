@@ -23,7 +23,7 @@ const logout = require('./controllers/logOut');
 const storePost = require('./middleware/storePost');
 
 
-new mongoose.connect('mongodb://Mateen:Marinestar12@ds251894.mlab.com:51894/node-blog', {
+new mongoose.connect('mongodb+srv://mateen:mateen@cluster0.ydjp5.mongodb.net/TodoDB?retryWrites=true&w=majority', {
         useNewUrlParser: true
     })
     .then(() => 'You are now connected to Mongo!')
